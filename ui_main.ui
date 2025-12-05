@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>711</width>
+    <height>798</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>GST Reconciliation Tool</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QGroupBox" name="Darkmode">
+      <property name="styleSheet">
+       <string notr="true">/* === Main Background === */
+QMainWindow {
+    background-color: #121212;
+}
+
+/* === Card (Group Box) === */
+#grpCard {
+    background-color: #1E1E1E;
+    border-radius: 15px;
+    border: 1px solid #333333;
+    padding: 15px;
+}
+
+/* === Buttons === */
+QPushButton {
+    background-color: #0d6efd; /* Blue */
+    color: white;
+    border-radius: 8px;
+    padding: 6px;
+}
+
+QPushButton:hover {
+    background-color: #0b5ed7;
+}
+
+QPushButton:pressed {
+    background-color: #0a58ca;
+}
+
+/* === Textboxes === */
+QLineEdit {
+    background-color: #2A2A2A;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+/* === Progress Bar === */
+QProgressBar {
+    height: 10px;
+    border-radius: 5px;
+    background-color: #2A2A2A;
+}
+
+QProgressBar::chunk {
+    background-color: #0d6efd;
+    border-radius: 5px;
+}</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>267</width>
+         <height>302</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="3" column="1">
+         <widget class="QLabel" name="lblLoading&#10;">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0">
+         <widget class="QPushButton" name="btnOpenFolder">
+          <property name="text">
+           <string>Open Output Folder</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QProgressBar" name="progressBar">
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="1">
+         <widget class="QLabel" name="lblLogo">
+          <property name="text">
+           <string>Logo</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="txtPurchase"/>
+        </item>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="btnPurchase">
+          <property name="text">
+           <string>Browse Purchase</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="btnGSTR2A">
+          <property name="text">
+           <string>Browse GSTR2A</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="txtGSTR2A"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="btnRun">
+          <property name="text">
+           <string>Run Reconciliation</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0" colspan="2">
+         <widget class="QLabel" name="txtStatus">
+          <property name="text">
+           <string>Status: Waiting...</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QPushButton" name="btnTheme&#10;">
+       <property name="geometry">
+        <rect>
+         <x>580</x>
+         <y>0</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>DARKMODE</string>
+       </property>
+      </widget>
+      <widget class="QTabWidget" name="tabVendorSummary">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>430</y>
+         <width>691</width>
+         <height>281</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="tab">
+        <attribute name="title">
+         <string>Tab 1</string>
+        </attribute>
+       </widget>
+       <widget class="QWidget" name="tab_2">
+        <attribute name="title">
+         <string>Tab 2</string>
+        </attribute>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
